@@ -19,11 +19,13 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieParser());
 const corsOptions = {
-    origin: 'https://frontend-placement-portal.vercel.app/', // Allow only your frontend origin
+    origin: 'https://frontend-placement-portal.vercel.app', // Allow your deployed frontend
     credentials: true, // Allow cookies and authentication headers
-    methods: 'GET,POST,PUT,DELETE', // Allowed HTTP methods
-    allowedHeaders: 'Content-Type,Authorization', // Allowed headers
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
 };
+
+
 
 app.use(cors(corsOptions));
 
